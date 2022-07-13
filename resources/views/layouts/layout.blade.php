@@ -75,25 +75,14 @@
                     <div class="w-100 d-block d-md-none"></div>
                     <div class="col-12 col-sm-6 col-md-4 order-md-3 mb-4 mb-md-0">
                         <ul class="nav align-items-center justify-content-center justify-content-sm-end">
-                            @if (auth()->check())
                                 <li class="nav-item">
                                     <div
                                         class="date-today text-uppercase badge bg-dark rounded-pill py-2 px-3 fw-medium">
                                     </div>
                                 </li>
-                                {{-- Boton cerrar sesion --}}
-                                <a href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();"
-                                    class="button button-mini button-circle button-red"><i
-                                        class="icon-off"></i>{{ __('SALIR') }}</a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            @else
                                 <li class="nav-item">
                                     <a class="nav-link text-uppercase fw-medium"
-                                        href="{{ route('login') }}">Iniciar
+                                        href="{{ route('index') }}">Iniciar
                                         Sesión</a>
                                 </li>
                                 <li class="nav-item">
@@ -101,7 +90,6 @@
                                         class="date-today text-uppercase badge bg-dark rounded-pill py-2 px-3 fw-medium">
                                     </div>
                                 </li>
-                            @endif
                         </ul>
                     </div>
 
@@ -147,54 +135,19 @@
                                     </a>
                                 </li>
                                 <li
-                                    class="menu-item  menu-color-tech {{ !Route::is('lista-posts') ?: 'active current menu-color-tech' }}">
-                                    <a class="menu-link" href="{{ route('lista-posts') }}">
+                                    class="menu-item  menu-color-tech {{ !Route::is('index') ?: 'active current menu-color-tech' }}">
+                                    <a class="menu-link" href="{{ route('index') }}">
                                         <div>Publicaciones</div>
                                     </a>
                                 </li>
                                 <li
-                                    class="menu-item menu-color-travel {{ !Route::is('sobrenosotros') ?: 'active current menu-item menu-color-travel ' }}">
-                                    <a class="menu-link" href="{{ route('sobrenosotros') }}">
+                                    class="menu-item menu-color-travel {{ !Route::is('index') ?: 'active current menu-item menu-color-travel ' }}">
+                                    <a class="menu-link" href="{{ route('index') }}">
                                         <div>Sobre Nosotros</div>
                                     </a>
                                 </li>
-                                @if (auth()->check())
-                                    <li
-                                        class="menu-item menu-color-fashion {{ !Route::is('perfil') ?: 'active current menu-color-fashion' }}">
-                                        <a class="menu-link" href="{{ route('perfil') }}">
-                                            <div>Perfil</div>
-                                        </a>
-                                    </li>
-                                    @can('publicaciones.crear')
-                                        <li
-                                            class="menu-item menu-color-food {{ !Route::is('publicacion.crear') ?: 'active current menu-color-food' }}">
-                                            <a class="menu-link" href="{{ route('publicacion.crear') }}">
-                                                <div>Crear publicación</div>
-                                            </a>
-                                        </li>
-                                    @endcan
-                                    @can('administracion')
-                                        <li
-                                            class="menu-item menu-color-sports {{ !Route::is('admin.home') ?: 'active current menu-color-sports' }}">
-                                            <a class="menu-link" href="{{ route('admin.home') }}">
-                                                <div>Administración</div>
-                                            </a>
-                                        </li>
-                                    @endcan
-                                @else
-                                    <li
-                                        class="menu-item menu-color-lifestyle {{ !Route::is('register') ?: 'active current menu-color-lifestyle' }}">
-                                        <a class="menu-link" href="{{ route('register') }}">Registrarse</a>
-                                    </li>
-                                @endif
                             </ul>
-                        </nav><!-- #primary-menu end -->
-
-                        <form class="top-search-form" action="{{ route('publicacion.buscar') }}" method="POST">
-                            @csrf
-                            <input type="text" name="buscador" class="form-control" value=""
-                                placeholder="Ingresa tu publicación a buscar" autocomplete="off">
-                        </form>
+                        </nav>
 
                     </div>
                 </div>
@@ -226,43 +179,9 @@
                                 <li class="{{ !Route::is('index') ?: 'active' }}">
                                     <a href="{{ route('index') }}">Inicio</a>
                                 </li>
-                                <li class="{{ !Route::is('sobrenosotros') ?: 'active' }}">
-                                    <a href="{{ route('sobrenosotros') }}">Sobre Nosotros</a>
+                                <li class="{{ !Route::is('index') ?: 'active' }}">
+                                    <a href="{{ route('index') }}">Sobre Nosotros</a>
                                 </li>
-                                @if (auth()->check())
-                                    <li class="{{ !Route::is('perfil') ?: 'active' }}">
-                                        <a href="{{ route('perfil') }}">Perfil Usuario</a>
-                                    </li>
-                                    @can('publicaciones.crear')
-                                        <li class="{{ !Route::is('publicacion.crear') ?: 'active' }}">
-                                            <a href="{{ route('publicacion.crear') }}">Crear Publicacion</a>
-                                        </li>
-                                    @endcan
-                                    @can('administracion')
-                                        <li class="{{ !Route::is('contacto') ?: 'active' }}">
-                                            <a href="{{ route('admin.home') }}">Administracion</a>
-                                        </li>
-                                    @endcan
-                                    <li>
-                                        <a class="dropdown-item" href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                       document.getElementById('logout-form').submit();">
-                                            {{ __('Salir') }}
-                                        </a>
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                            class="d-none">
-                                            @csrf
-                                        </form>
-                                    </li>
-                                @else
-                                    <li>
-                                        <a href="{{ route('login') }}">Iniciar Sesion</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('register') }}">Registrarse</a>
-                                    </li>
-                                @endif
-
                             </ul>
                         </div>
                     </div>
