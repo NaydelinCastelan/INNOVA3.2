@@ -17,6 +17,7 @@
 									<th>Fecha de encargo</th>
 									<th>Fecha de entrega</th>
 									<th>Total</th>
+                                    <th>Acciones</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -27,6 +28,12 @@
 									<td>2022/02/04</td>
 									<td>2022/03/04</td>
 									<td>$800</td>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+											<label class="form-check-label" for="defaultCheck1">
+												Entregado
+											</label>
+                                    </td>
 								</tr>
                                 <tr>
 									<td>Laura Hernández</td>
@@ -35,6 +42,12 @@
 									<td>2021/10/04</td>
 									<td>2022/01/01</td>
 									<td>$400</td>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+											<label class="form-check-label" for="defaultCheck1">
+												Entregado
+											</label>
+                                    </td>
 								</tr>
 							</tbody>
 						</table>

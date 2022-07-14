@@ -83,10 +83,10 @@
        ============================================= -->
                             <div id="top-search" class="header-misc-icon">
                                 <li>
-                                    <a href="{{ route('index') }}">Iniciar Sesion</a>
+                                    <a href="#" class="button button-mini button-circle button-red"><i class="icon-off"></i> Cerrar sesión</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('index') }}">Cerrar Sesion</a>
+                                    <a href="#" class="button button-small button-circle button-green"><i class="icon-off"></i>Iniciar sesión</a>
                                 </li>
                             </div><!-- #top-search end -->
                         </div>

@@ -17,6 +17,7 @@
 									<th>Fecha de encargo</th>
 									<th>Fecha de entrega</th>
 									<th>Total</th>
+                                    <th>Acción</th>
 								</tr>
 							</thead>
 							<tbody>
