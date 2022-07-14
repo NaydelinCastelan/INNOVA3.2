@@ -1,4 +1,4 @@
-@extends('layouts.layout') @section('Nombre', 'Generar pedido')
+@extends('layouts.layout') @section('Nombre', 'Almacen')
 @section('contenido')
 <!-- Content
 		============================================= -->
