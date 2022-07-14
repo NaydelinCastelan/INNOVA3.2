@@ -8,7 +8,7 @@
         content="blog para la presentacion de los avances tecnologicos dentro del equipo de desarrollo AndoCodeando">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Stylesheets
- ============================================= -->
+     ============================================= -->
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}" type="text/css" />
     <link rel="stylesheet" href="{{ asset('assets/sweetalert/sweetalert.min.css') }}" type="text/css" />
     <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
-    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}" />
+    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Theme Color Stylesheet -->
@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/layers.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/navigation.css') }}">
     <!-- Document Title
- ============================================= -->
+     ============================================= -->
     <title>@yield('Nombre')</title>
     <style>
         /* Revolution Slider Styles */
@@ -61,98 +61,64 @@
 
         <!-- Header
   ============================================= -->
-        <header id="header" class="header-size-sm" data-sticky-shrink="false">
-            <div class="container">
-                <div class="header-row justify-content-between">
-                    <!-- Logo
-     ============================================= -->
-                    <div id="logo" class="col-auto ms-auto ms-mb-0 me-mb-0 order-md-2">
-                        <a href="{{ route('index') }}" class="standard-logo"><img class="img-fluid"
-                                src="{{ asset('/assets/images/LogoAC.webp') }}" alt="AndoCodeando Logo"></a>
-                        <a href="{{ route('index') }}" class="retina-logo"><img class="mx-auto"
-                                src="{{ asset('/assets/images/LogoAC.webp') }}" alt="AndoCodeando Logo"></a>
-                    </div><!-- #logo end -->
-                    <div class="w-100 d-block d-md-none"></div>
-                    <div class="col-12 col-sm-6 col-md-4 order-md-3 mb-4 mb-md-0">
-                        <ul class="nav align-items-center justify-content-center justify-content-sm-end">
-                                <li class="nav-item">
-                                    <div
-                                        class="date-today text-uppercase badge bg-dark rounded-pill py-2 px-3 fw-medium">
-                                    </div>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-uppercase fw-medium"
-                                        href="{{ route('index') }}">Iniciar
-                                        Sesión</a>
-                                </li>
-                                <li class="nav-item">
-                                    <div
-                                        class="date-today text-uppercase badge bg-dark rounded-pill py-2 px-3 fw-medium">
-                                    </div>
-                                </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-
-            <div id="header-wrap" class="border-top border-f5">
+        <header id="header" class="full-header">
+            <div id="header-wrap">
                 <div class="container">
-                    <div class="header-row justify-content-between flex-row-reverse flex-lg-row">
+                    <div class="header-row">
+
+                        <!-- Logo
+      ============================================= -->
+                        <div id="logo">
+                            <a href="{{ route('index') }}" class="standard-logo"
+                                data-dark-logo="images/logo-dark.png"><img
+                                    src="{{ asset('/assets/images/logoi.png') }}" alt="Canvas Logo"></a>
+                            <a href="{{ route('index') }}" class="retina-logo"
+                                data-dark-logo="images/logo-dark@2x.png"><img
+                                    src="{{ asset('/assets/images/logoi.png') }}" alt="Canvas Logo"></a>
+                        </div><!-- #logo end -->
 
                         <div class="header-misc">
 
                             <!-- Top Search
        ============================================= -->
                             <div id="top-search" class="header-misc-icon">
-                                <a href="#" id="top-search-trigger"><i class="icon-line-search"></i><i
-                                        class="icon-line-cross"></i></a>
+                                <a href="#" class="button button-mini button-circle button-red"><i
+                                        class="icon-off"></i>Red</a>
                             </div><!-- #top-search end -->
-
                         </div>
-
-                        <div id="primary-menu-trigger">
-                            <svg class="svg-trigger" viewBox="0 0 100 100">
-                                <path
-                                    d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20">
-                                </path>
-                                <path d="m 30,50 h 40"></path>
-                                <path
-                                    d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20">
-                                </path>
-                            </svg>
-                        </div>
-
-                        <!-- Primary Navigation
-      ============================================= -->
-                        <nav class="primary-menu with-arrows">
-
+                        <nav class="primary-menu">
                             <ul class="menu-container">
-                                <li
-                                    class="menu-item  menu-color-home {{ !Route::is('index') ?: 'active current menu-color-home' }}">
-                                    <a class="menu-link" href="{{ route('index') }}">
+                                <li class="menu-item">
+                                    <a class="menu-link" href="index.html">
                                         <div>Inicio</div>
                                     </a>
                                 </li>
-                                <li
-                                    class="menu-item  menu-color-tech {{ !Route::is('index') ?: 'active current menu-color-tech' }}">
-                                    <a class="menu-link" href="{{ route('index') }}">
-                                        <div>Publicaciones</div>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="index.html">
+                                        <div>Pendientes</div>
                                     </a>
                                 </li>
-                                <li
-                                    class="menu-item menu-color-travel {{ !Route::is('index') ?: 'active current menu-item menu-color-travel ' }}">
-                                    <a class="menu-link" href="{{ route('index') }}">
-                                        <div>Sobre Nosotros</div>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="index.html">
+                                        <div>Completados</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="index.html">
+                                        <div>Generar pedido</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="index.html">
+                                        <div>Almacen</div>
                                     </a>
                                 </li>
                             </ul>
-                        </nav>
+                        </nav><!-- #menu end -->
 
                     </div>
                 </div>
             </div>
-
             <div class="header-wrap-clone"></div>
         </header><!-- #header end -->
 

@@ -16,4 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('Ventas.index');
 })->name('index');
+Route::get('/pendientes', function () {
+    return view('Ventas.pedidospendiente');
+})->name('pendientes');
+Route::get('/completados', function () {
+    return view('Ventas.completados');
+})->name('completados');
+
 
