@@ -45,14 +45,14 @@ body #side-panel.dark {
 
 .dark .section,
 .section.dark {
-    background-color: #282828;
+    background-color: #787a7c;
     border-color: rgba(255, 255, 255, 0.1);
 }
 
 .dark #top-bar,
 #top-bar.dark {
     border-bottom-color: rgba(255, 255, 255, 0.1);
-    background-color: #282828;
+    background-color: #787a7c;
 }
 
 .dark .top-links {
@@ -432,7 +432,7 @@ body #side-panel.dark {
 
 .dark #page-title,
 #page-title.dark {
-    background-color: #282828;
+    background-color: #787a7c;
     border-bottom-color: rgba(255, 255, 255, 0.15);
 }
 
@@ -711,7 +711,7 @@ body #side-panel.dark {
 }
 
 .dark .button-light:not(.button-border):hover {
-    background-color: #282828;
+    background-color: #787a7c;
 }
 
 .dark .button.button-border:not(.button-light):not(.button-fill) {
@@ -1387,7 +1387,7 @@ body #side-panel.dark {
 .dark #footer,
 #footer.dark {
     color: rgba(255, 255, 255, 0.75);
-    background-color: #282828;
+    background-color: #787a7c;
     border-top-color: rgba(255, 255, 255, 0.15);
 }
 
@@ -1709,7 +1709,7 @@ body #side-panel.dark {
 
 .dark .form-select:not(.not-dark) option,
 .dark .sm-form-select:not(.not-dark) option {
-    background-color: #282828;
+    background-color: #787a7c;
 }
 
 .dark .form-control:not(.not-dark):active,
@@ -2211,7 +2211,7 @@ body #side-panel.dark {
 }
 
 .dark .popover {
-    background-color: #282828;
+    background-color: #787a7c;
     border-color: #494949;
 }
 
@@ -2225,7 +2225,7 @@ body #side-panel.dark {
 }
 
 .dark .popover.top>.arrow:after {
-    border-top-color: #282828;
+    border-top-color: #787a7c;
 }
 
 .dark .popover.right>.arrow {
@@ -2233,7 +2233,7 @@ body #side-panel.dark {
 }
 
 .dark .popover.right>.arrow:after {
-    border-right-color: #282828;
+    border-right-color: #787a7c;
 }
 
 .dark .popover.bottom>.arrow {
@@ -2241,7 +2241,7 @@ body #side-panel.dark {
 }
 
 .dark .popover.bottom>.arrow:after {
-    border-bottom-color: #282828;
+    border-bottom-color: #787a7c;
 }
 
 .dark .popover.left>.arrow {
@@ -2249,5 +2249,5 @@ body #side-panel.dark {
 }
 
 .dark .popover.left>.arrow:after {
-    border-left-color: #282828;
+    border-left-color: #787a7c;
 }

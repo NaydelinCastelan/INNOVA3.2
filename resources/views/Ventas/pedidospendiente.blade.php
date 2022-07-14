@@ -21,12 +21,20 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td>Tiger Nixon</td>
-									<td>System Architect</td>
-									<td>Edinburgh</td>
-									<td>61</td>
-									<td>2011/04/25</td>
-									<td>$320,800</td>
+									<td>Naydelin Castelan</td>
+									<td>2 lonas de vinil grandes</td>
+									<td>Lona vinil G</td>
+									<td>2022/02/04</td>
+									<td>2022/03/04</td>
+									<td>$800</td>
+								</tr>
+                                <tr>
+									<td>Laura Hernández</td>
+									<td>2 lonas de vinil chicas</td>
+									<td>Lona vinil G</td>
+									<td>2021/10/04</td>
+									<td>2022/01/01</td>
+									<td>$400</td>
 								</tr>
 							</tbody>
 						</table>

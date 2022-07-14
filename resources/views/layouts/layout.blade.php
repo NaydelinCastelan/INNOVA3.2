@@ -82,34 +82,38 @@
                             <!-- Top Search
        ============================================= -->
                             <div id="top-search" class="header-misc-icon">
-                                <a href="#" class="button button-mini button-circle button-red"><i
-                                        class="icon-off"></i>Red</a>
+                                <li>
+                                    <a href="{{ route('index') }}">Iniciar Sesion</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('index') }}">Cerrar Sesion</a>
+                                </li>
                             </div><!-- #top-search end -->
                         </div>
                         <nav class="primary-menu">
                             <ul class="menu-container">
                                 <li class="menu-item">
-                                    <a class="menu-link" href="index.html">
+                                    <a class="menu-link" href="{{ route('index') }}">
                                         <div>Inicio</div>
                                     </a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link" href="index.html">
+                                    <a class="menu-link" href="{{ route('pendientes') }}">
                                         <div>Pendientes</div>
                                     </a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link" href="index.html">
+                                    <a class="menu-link" href="{{ route('completados') }}">
                                         <div>Completados</div>
                                     </a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link" href="index.html">
+                                    <a class="menu-link" href="{{ route('generar') }}">
                                         <div>Generar pedido</div>
                                     </a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link" href="index.html">
+                                    <a class="menu-link" href="{{ route('almacen') }}">
                                         <div>Almacen</div>
                                     </a>
                                 </li>
@@ -142,11 +146,30 @@
                         <div class="widget widget_links clearfix">
                             <h4 class="mb-3 mb-sm-4">Links Rápidos</h4>
                             <ul>
-                                <li class="{{ !Route::is('index') ?: 'active' }}">
-                                    <a href="{{ route('index') }}">Inicio</a>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="{{ route('index') }}">
+                                        <div>Inicio</div>
+                                    </a>
                                 </li>
-                                <li class="{{ !Route::is('index') ?: 'active' }}">
-                                    <a href="{{ route('index') }}">Sobre Nosotros</a>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="{{ route('pendientes') }}">
+                                        <div>Pendientes</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="{{ route('completados') }}">
+                                        <div>Completados</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="{{ route('generar') }}">
+                                        <div>Generar pedido</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="{{ route('almacen') }}">
+                                        <div>Almacen</div>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -158,32 +181,22 @@
                     <div class="col-lg-4 col-sm-6 mb-0">
                         <h4 class="mb-3 mb-sm-4">Información de contacto</h4>
                         <address>
-                            <strong>Los Reyes Acozac</strong> 55755<br>
+                            <strong>SAN PEDRO ATZOMPA</strong> 55770<br>
                             Tecámac, Edo. de Méx.<br>
                         </address>
-                        <abbr title="Phone Number"><strong>Celular:</strong></abbr> (+55) 8547 6325<br>
-                        <abbr title="Email Address"><strong>Email:</strong></abbr> contacto@bytecoders.tech <br><br>
+                        <abbr title="Phone Number"><strong>Teléfono:</strong></abbr> 01(55) 59387071 <br>
+                        <abbr title="Phone Number"><strong>Celular:</strong></abbr> (+55) 3504-2491<br>
+                        <abbr title="Email Address"><strong>Email:</strong></abbr> inf.innova3.2@gmail.com <br><br>
                     </div>
                     <!-- Footer Widget 4
          ============================================= -->
                     <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
                         <a href="{{ route('index') }}" class="standard-logo"><img class="mx-auto"
-                                src="/assets/images/LogoAC.webp" alt="AndoCodeando Logo"></a>
+                                src="/assets/images/logoi.png" alt="Logo"></a>
                     </div>
                 </div>
             </div>
     </div>
-    <!-- Copyrights
-       ============================================= -->
-    <div id="copyrights">
-        <div class="container clearfix">
-            <div class="mb-2 ls1 text-uppercase fw-bold">
-                <div class="col-md-6 align-self-center">
-                    Copyrights &copy; 2022 All Rights Reserved by ByteCoders <br>
-                </div>
-            </div>
-        </div>
-    </div><!-- #copyrights end -->
     </footer><!-- #footer end -->
 
     </div><!-- #wrapper end -->
@@ -200,7 +213,7 @@
     <script src="{{ asset('assets/Js/functions.js') }}"></script>
     <!-- ADD-ONS JS FILES -->
     <script src="{{ asset('vendor/jQuery-Plugin-stringToSlug-1.3/jquery.stringToSlug.min.js') }}"></script>
-    <script src="{{ asset('assets/sweetalert/sweetalert.min.js') }}"></script>
+    <script src="{{ asset('/assets/sweetalert/sweetalert.min.js') }}"></script>
     @yield('scripts')
 
 

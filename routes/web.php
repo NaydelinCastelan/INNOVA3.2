@@ -22,5 +22,11 @@ Route::get('/pendientes', function () {
 Route::get('/completados', function () {
     return view('Ventas.completados');
 })->name('completados');
+Route::get('/almacen', function () {
+    return view('Ventas.almacen');
+})->name('almacen');
+Route::get('/generar', function () {
+    return view('Ventas.generar');
+})->name('generar');
 
 
