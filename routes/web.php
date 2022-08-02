@@ -30,3 +30,13 @@ Route::get('/generar', function () {
 })->name('generar');
 
 
+Auth::routes();
+
+Route::resource('producto', App\Http\Controllers\ProductoController::class);
+Route::resource('empresa', App\Http\Controllers\EmpresaController::class);
+Route::resource('ventas', App\Http\Controllers\VentaController::class);
+Route::resource('cliente', App\Http\Controllers\ClienteController::class);
+Route::resource('generar_pedidos', App\Http\Controllers\GenerarPedidoController::class);
+Route::resource('ticket', App\Http\Controllers\TicketController::class);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

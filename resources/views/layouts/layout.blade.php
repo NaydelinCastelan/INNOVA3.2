@@ -82,12 +82,35 @@
                             <!-- Top Search
        ============================================= -->
                             <div id="top-search" class="header-misc-icon">
-                                <li>
-                                    <a href="#" class="button button-mini button-circle button-red"><i class="icon-off"></i> Cerrar sesión</a>
+                            <ul class="nav align-items-center justify-content-center justify-content-sm-end">
+                            @if (auth()->check())
+                                <li class="nav-item">
+                                    <div
+                                        class="date-today text-uppercase badge bg-dark rounded-pill py-2 px-3 fw-medium">
+                                    </div>
                                 </li>
-                                <li>
-                                    <a href="#" class="button button-small button-circle button-green"><i class="icon-off"></i>Iniciar sesión</a>
+                                {{-- Boton cerrar sesion --}}
+                                <a href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();"
+                                    class="button button-mini button-circle button-red"><i
+                                        class="icon-off"></i>{{ __('SALIR') }}</a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            @else
+                                <li class="nav-item">
+                                    <a class="nav-link text-uppercase fw-medium"
+                                        href="{{ route('login') }}">Iniciar
+                                        Sesión</a>
                                 </li>
+                                <li class="nav-item">
+                                    <div
+                                        class="date-today text-uppercase badge bg-dark rounded-pill py-2 px-3 fw-medium">
+                                    </div>
+                                </li>
+                            @endif
+                        </ul>
                             </div><!-- #top-search end -->
                         </div>
                         <nav class="primary-menu">
@@ -105,16 +128,21 @@
                                 <li class="menu-item">
                                     <a class="menu-link" href="{{ route('completados') }}">
                                         <div>Completados</div>
-                                    </a>
+                                    </a> 
                                 </li>
                                 <li class="menu-item">
                                     <a class="menu-link" href="{{ route('generar') }}">
                                         <div>Generar pedido</div>
                                     </a>
                                 </li>
+                                <li class="nav-link">
+                                    <a class="menu-link" href="{{ route('producto') }}">
+                                        <div>producto</div>
+                                    </a>
+                                </li>
                                 <li class="menu-item">
-                                    <a class="menu-link" href="{{ route('almacen') }}">
-                                        <div>Almacen</div>
+                                    <a class="menu-link" href="{{ route('home') }}">
+                                        <div>Login</div>
                                     </a>
                                 </li>
                             </ul>
@@ -165,10 +193,11 @@
                                     <a class="menu-link" href="{{ route('generar') }}">
                                         <div>Generar pedido</div>
                                     </a>
+                                    
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link" href="{{ route('almacen') }}">
-                                        <div>Almacen</div>
+                                    <a class="menu-link" href="{{ route('home') }}">
+                                        <div>login</div>
                                     </a>
                                 </li>
                             </ul>
