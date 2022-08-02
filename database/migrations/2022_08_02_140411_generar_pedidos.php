@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('generar_pedido', function(Blueprint $table){
+        Schema::create('generar_pedidos', function(Blueprint $table){
             $table->string('folio');
             $table->string('cliente_id')->references('nombre')->on('clientes');
             $table->date('fecha_encargo');
@@ -25,8 +25,8 @@ return new class extends Migration
             $table->boolean('cantidad');
             $table->string('precio')->references('precio')->on('productos');
             $table->string('total');
-            $table->boolean('entregado');
             $table->timestamps();
+
         });
     }
 

@@ -13,11 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('empresa', function(Blueprint $table){
-            $table->string('nombre');
-            $table->string('direccion');
-            $table->string ('telefono');
-            $table->string ('pagina_internet');
+        Schema::create('ventas', function(Blueprint $table){
+            $table->string('folio')->references('folio')->on('generar_pedidos');
+            $table->string('cliente_id')->references('nombre')->on('clientes');
+            $table->date('fecha_encargo');
+            $table->date('fecha_entrega');
+            $table->string('total');
             $table->timestamps();
 
         }); 

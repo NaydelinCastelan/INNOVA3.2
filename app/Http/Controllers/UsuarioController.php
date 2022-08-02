@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Venta;
+use App\Models\Usuario;
 use Illuminate\Http\Request;
 
 /**
- * Class VentaController
+ * Class UsuarioController
  * @package App\Http\Controllers
  */
-class VentaController extends Controller
+class UsuarioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,10 +18,10 @@ class VentaController extends Controller
      */
     public function index()
     {
-        $ventas = Venta::paginate();
+        $usuarios = Usuario::paginate();
 
-        return view('venta.index', compact('ventas'))
-            ->with('i', (request()->input('page', 1) - 1) * $ventas->perPage());
+        return view('usuario.index', compact('usuarios'))
+            ->with('i', (request()->input('page', 1) - 1) * $usuarios->perPage());
     }
 
     /**
@@ -31,8 +31,8 @@ class VentaController extends Controller
      */
     public function create()
     {
-        $venta = new Venta();
-        return view('venta.create', compact('venta'));
+        $usuario = new Usuario();
+        return view('usuario.create', compact('usuario'));
     }
 
     /**
@@ -43,12 +43,12 @@ class VentaController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(Venta::$rules);
+        request()->validate(Usuario::$rules);
 
-        $venta = Venta::create($request->all());
+        $usuario = Usuario::create($request->all());
 
-        return redirect()->route('venta.index')
-            ->with('success', 'Venta created successfully.');
+        return redirect()->route('usuarios.index')
+            ->with('success', 'Usuario created successfully.');
     }
 
     /**
@@ -59,9 +59,9 @@ class VentaController extends Controller
      */
     public function show($id)
     {
-        $venta = Venta::find($id);
+        $usuario = Usuario::find($id);
 
-        return view('venta.show', compact('venta'));
+        return view('usuario.show', compact('usuario'));
     }
 
     /**
@@ -72,26 +72,26 @@ class VentaController extends Controller
      */
     public function edit($id)
     {
-        $venta = Venta::find($id);
+        $usuario = Usuario::find($id);
 
-        return view('venta.edit', compact('venta'));
+        return view('usuario.edit', compact('usuario'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param  Venta $venta
+     * @param  Usuario $usuario
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Venta $venta)
+    public function update(Request $request, Usuario $usuario)
     {
-        request()->validate(Venta::$rules);
+        request()->validate(Usuario::$rules);
 
-        $venta->update($request->all());
+        $usuario->update($request->all());
 
-        return redirect()->route('venta.index')
-            ->with('success', 'Venta updated successfully');
+        return redirect()->route('usuarios.index')
+            ->with('success', 'Usuario updated successfully');
     }
 
     /**
@@ -101,9 +101,9 @@ class VentaController extends Controller
      */
     public function destroy($id)
     {
-        $venta = Venta::find($id)->delete();
+        $usuario = Usuario::find($id)->delete();
 
-        return redirect()->route('venta.index')
-            ->with('success', 'Venta deleted successfully');
+        return redirect()->route('usuarios.index')
+            ->with('success', 'Usuario deleted successfully');
     }
 }

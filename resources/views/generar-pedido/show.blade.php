@@ -64,10 +64,6 @@
                             <strong>Total:</strong>
                             {{ $generarPedido->total }}
                         </div>
-                        <div class="form-group">
-                            <strong>Entregado:</strong>
-                            {{ $generarPedido->entregado }}
-                        </div>
 
                     </div>
                 </div>

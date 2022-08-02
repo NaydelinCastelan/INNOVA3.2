@@ -13,14 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('cliente', function(Blueprint $table){
-            $table->id();
-            $table->string ('nombre');
-            $table->string ('direccion');
-            $table->string ('telefono');
+        Schema::create('tickets', function(Blueprint $table){
+            $table->string('folio')->references('folio')->on('generar_pedidos');
+            $table->string('info_empresa')->references('nombre')->on('empresa');
+            $table->string('pedido')->references('folio')->on('generar_pedidos');
             $table->timestamps();
 
-        });
+        }); 
     }
 
     /**

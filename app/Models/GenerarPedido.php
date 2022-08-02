@@ -18,7 +18,6 @@ use Illuminate\Database\Eloquent\Model;
  * @property $cantidad
  * @property $precio
  * @property $total
- * @property $entregado
  * @property $created_at
  * @property $updated_at
  *
@@ -39,7 +38,6 @@ class GenerarPedido extends Model
 		'cantidad' => 'required',
 		'precio' => 'required',
 		'total' => 'required',
-		'entregado' => 'required',
     ];
 
     protected $perPage = 20;
@@ -49,7 +47,7 @@ class GenerarPedido extends Model
      *
      * @var array
      */
-    protected $fillable = ['folio','cliente_id','fecha_encargo','fecha_entrega','hora','instalacion','descripcion','productos','cantidad','precio','total','entregado'];
+    protected $fillable = ['folio','cliente_id','fecha_encargo','fecha_entrega','hora','instalacion','descripcion','productos','cantidad','precio','total'];
 
 
 

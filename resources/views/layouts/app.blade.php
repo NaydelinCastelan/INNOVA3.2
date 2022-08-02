@@ -30,7 +30,27 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                      
+                    <li class="nav-item">
+                             <a class="nav-link" href="{{ route('productos.index') }}">{{ __('productos') }}</a>
+                        </li>
+                        <li class="nav-item">
+                             <a class="nav-link" href="{{ route('empresas.index') }}">{{ __('empresas') }}</a>
+                        </li>
+                        <li class="nav-item">
+                             <a class="nav-link" href="{{ route('usuarios.index') }}">{{ __('usuarios') }}</a>
+                        </li>
+                        <li class="nav-item">
+                             <a class="nav-link" href="{{ route('clientes.index') }}">{{ __('clientes') }}</a>
+                        </li>
+                        <li class="nav-item">
+                             <a class="nav-link" href="{{ route('generar_pedidos.index') }}">{{ __('generar_pedidos') }}</a>
+                        </li>
+                        <li class="nav-item">
+                             <a class="nav-link" href="{{ route('tickets.index') }}">{{ __('tickets') }}</a>
+                        </li>
+                        <li class="nav-item">
+                             <a class="nav-link" href="{{ route('ventas.index') }}">{{ __('ventas') }}</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -53,9 +73,7 @@
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('producto.index') }}">{{ __('producto') }}</a>
-                                </li>
+
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

@@ -47,7 +47,6 @@
 										<th>Cantidad</th>
 										<th>Precio</th>
 										<th>Total</th>
-										<th>Entregado</th>
 
                                         <th></th>
                                     </tr>
@@ -68,7 +67,6 @@
 											<td>{{ $generarPedido->cantidad }}</td>
 											<td>{{ $generarPedido->precio }}</td>
 											<td>{{ $generarPedido->total }}</td>
-											<td>{{ $generarPedido->entregado }}</td>
 
                                             <td>
                                                 <form action="{{ route('generar-pedidos.destroy',$generarPedido->id) }}" method="POST">

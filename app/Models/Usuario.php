@@ -5,24 +5,22 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Cliente
+ * Class Usuario
  *
- * @property $nombre
- * @property $direccion
- * @property $telefono
+ * @property $usuario
+ * @property $contraseña
  * @property $created_at
  * @property $updated_at
  *
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
-class Cliente extends Model
+class Usuario extends Model
 {
     
     static $rules = [
-		'nombre' => 'required',
-		'direccion' => 'required',
-		'telefono' => 'required',
+		'usuario' => 'required',
+		'contraseña' => 'required',
     ];
 
     protected $perPage = 20;
@@ -32,7 +30,7 @@ class Cliente extends Model
      *
      * @var array
      */
-    protected $fillable = ['nombre','direccion','telefono'];
+    protected $fillable = ['usuario','contraseña'];
 
 
 

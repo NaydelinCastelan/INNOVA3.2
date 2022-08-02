@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ticket', function(Blueprint $table){
-            $table->string('folio')->references('folio')->on('generar_pedido');
-            $table->string('info_empresa')->references('nombre')->on('empresa');
-            $table->string('pedido')->references('folio')->on('generar_pedido');
+        Schema::create('usuarios', function(Blueprint $table){
+            $table->string('usuario');
+            $table->string('contraseña');
             $table->timestamps();
+
         });
     }
 

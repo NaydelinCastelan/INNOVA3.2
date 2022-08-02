@@ -56,11 +56,6 @@
             {{ Form::text('total', $generarPedido->total, ['class' => 'form-control' . ($errors->has('total') ? ' is-invalid' : ''), 'placeholder' => 'Total']) }}
             {!! $errors->first('total', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-        <div class="form-group">
-            {{ Form::label('entregado') }}
-            {{ Form::text('entregado', $generarPedido->entregado, ['class' => 'form-control' . ($errors->has('entregado') ? ' is-invalid' : ''), 'placeholder' => 'Entregado']) }}
-            {!! $errors->first('entregado', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
 
     </div>
     <div class="box-footer mt20">
